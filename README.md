@@ -42,3 +42,36 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+# rush-ui
+
+> When you need something done, Rush it!
+
+[![NPM](https://img.shields.io/npm/v/rush-ui.svg)](https://www.npmjs.com/package/rush-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+## Install
+
+```bash
+npm install --save rush-ui
+```
+
+## Usage
+
+```tsx
+import React, { Component } from 'react'
+
+import MyComponent from 'rush-ui'
+import 'rush-ui/dist/index.css'
+
+class Example extends Component {
+  render() {
+    return <MyComponent />
+  }
+}
+```
+
+## License
+
+MIT © [Scarlet-Dev](https://github.com/Scarlet-Dev)
