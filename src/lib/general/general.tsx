@@ -155,6 +155,10 @@ export default class GeneralComponents{
         )
     }
 
+    /**
+     * 
+     * @param props 
+     */
     Tooltip (props: any){
         return(
             <div className="tooltip">
