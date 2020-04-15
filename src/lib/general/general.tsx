@@ -27,7 +27,21 @@ export default class GeneralComponents{
      * 
      * @param props 
      */
-    Card (props: Props){
+    Card (props: any){
+        return(
+            <div className="card">
+                {props.children ||
+                <span>
+                    <img src={props.src || ''} alt="Card Avatar" style={{width: '100%'}}/>
+                    <div className="card-container">
+                        <h4></h4>
+                        <p>Card content goes here.</p>
+                    </div>
+                </span>
+            }
+            </div>
+        );
+    }
 
     /**
      * 
