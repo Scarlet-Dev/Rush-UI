@@ -99,7 +99,16 @@ export default class GeneralComponents{
             <header>
                 <h1></h1>
             </header>
-        )
+    /**
+     * 
+     * @param props 
+     */
+    Loader (props: any){
+        return(
+            <div className="loader">
+                {props.children}
+            </div>
+        );
     }
 
     /**
