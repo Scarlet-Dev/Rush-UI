@@ -95,7 +95,14 @@ export default class GeneralComponents{
      * 
      * @param props 
      */
-    GridBasic(props: Props){
+    GridBasic(props: any){
+        return(
+            <div className="grid-row">
+                <div className="grid-column"></div>
+                <div className="grid-column"></div>
+                <div className="grid-column"></div>
+            </div>
+        );
 
     }
     
