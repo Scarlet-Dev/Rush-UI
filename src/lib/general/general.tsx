@@ -42,7 +42,7 @@ export default class GeneralComponents{
             </div>
         );
     }
-
+    
     /**
      * 
      * @param props 
@@ -54,7 +54,7 @@ export default class GeneralComponents{
                 <div>
                     {props.message || <p>Content here.</p>}
                 </div>
-    }
+                }
             </this.Button>
         );
     }
@@ -81,14 +81,16 @@ export default class GeneralComponents{
      * 
      * @param props
      */
-    Footer(props: Props) {
+    Footer(props: any) {
         return(
             <footer>
-                <span>
-                    Footer Here
-                </span>
+                <this.GridBasic>
+                    <div>
+                        Footer Here
+                    </div>
+                </this.GridBasic>
             </footer>
-            )
+        );
     }
 
     /**
@@ -164,7 +166,7 @@ export default class GeneralComponents{
         </div>
         );
     }
-    
+
     /**
      * 
      * @param props
