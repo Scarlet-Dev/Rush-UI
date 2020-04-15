@@ -87,5 +87,11 @@ export default class GeneralComponents{
      */
     Table (props: Props){
 
+    Tooltip (props: any){
+        return(
+            <div className="tooltip">
+                {props.message || <span className="tooltiptext">Tooltip Text.</span>}
+            </div>
+        )
     }
 }
