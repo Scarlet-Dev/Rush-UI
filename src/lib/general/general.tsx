@@ -29,6 +29,20 @@ export default class GeneralComponents{
      */
     Card (props: Props){
 
+    /**
+     * 
+     * @param props 
+     */
+    Collapsible (props: any){
+        return(
+            <this.Button>
+                {props.children ||
+                <div>
+                    {props.message || <p>Content here.</p>}
+                </div>
+    }
+            </this.Button>
+        );
     }
 
     /**
