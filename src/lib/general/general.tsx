@@ -131,6 +131,7 @@ export default class GeneralComponents{
     
     /**
      * 
+     * @param props
      */
     Table (props: any){
         return(
