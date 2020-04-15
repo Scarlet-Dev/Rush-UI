@@ -7,7 +7,7 @@ import * as React from "react";
 //     children: any;
 // }
 
-export default class GeneralElements{
+export default class GeneralComponents{
     constructor(){}
 
     /**
