@@ -1,5 +1,5 @@
 import React from 'react';
 
-export class Navigation{
+export default class NavigationComponents{
     
 }
