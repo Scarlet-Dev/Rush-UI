@@ -127,6 +127,16 @@ export default class GeneralComponents{
      */
     Modal (props: Props){
     
+    /**
+     * 
+     * @param props 
+     */
+    Overlay(props: any){
+        return(
+        <div className="overlay">
+            {props.children}
+        </div>
+        );
     }
     
     /**
