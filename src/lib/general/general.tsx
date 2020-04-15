@@ -63,8 +63,18 @@ export default class GeneralComponents{
      * 
      * @param props 
      */
-    Comments (props: Props){
-
+    Comments (props: any){
+        return(
+            <div>
+                <img src={props.src || ''} />
+                <div>
+                    <h1>Username Here</h1>
+                    <p>Commenter's comment here.</p>
+                    <i>Like: <span>{props.count}</span></i>
+                    <i>Dislike: <span>{props.count}</span></i>
+                </div>
+            </div>
+        );
     }
 
     /**
