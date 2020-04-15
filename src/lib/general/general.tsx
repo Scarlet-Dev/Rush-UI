@@ -104,11 +104,14 @@ export default class GeneralComponents{
      * 
      * @param props 
      */
-    Header(props: Props){
+    Header(props: any){
         return(
-            <header>
-                <h1></h1>
+            <header className="header">
+                {props.message || <h1></h1>}
             </header>
+        );
+    }
+
     /**
      * 
      * @param props 
