@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "Scarlet-Dev/rush-ui"
+    "url": "https://github.com/Scarlet-Dev/Rush-UI"
   },
   "private": true,
   "source": "src/index.tsx",
