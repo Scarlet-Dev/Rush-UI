@@ -99,7 +99,28 @@ export default class GeneralComponents{
     /**
      * 
      */
-    Table (props: Props){
+    Table (props: any){
+        return(
+            <table className="table">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        )
+    }
 
     Tooltip (props: any){
         return(
