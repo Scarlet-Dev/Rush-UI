@@ -1,10 +1,11 @@
 import * as React from "react";
 
-interface Props{
-    name: string;
-    method: () => {};
-    message: string;
-}
+// interface Props{
+//     name: string;
+//     method: () => {};
+//     message: string;
+//     children: any;
+// }
 
 export default class GeneralElements{
     constructor(){}
