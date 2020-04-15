@@ -15,12 +15,12 @@ export default class GeneralComponents{
      * 
      * @param props 
      */
-    Button(props: Props){
+    Button(props: any){
         return(
             <button name={props.name} onClick={props.method || null}>
                 {props.message}
             </button>
-            )
+        );
     }
 
     /**
