@@ -125,7 +125,23 @@ export default class GeneralComponents{
      * 
      * @param props 
      */
-    Modal (props: Props){
+    Modal (props: any){
+
+        return(
+            <this.Overlay>
+                <div>
+                    <h1>{'Modal Header goes here'}</h1>
+                    <hr/>
+                    <p>{'Enter modal content here'}</p>
+                    <div>
+                        <this.Button></this.Button>
+                        <this.Button></this.Button>
+                    </div>
+                </div>
+            </this.Overlay>
+        );
+    
+    }
     
     /**
      * 
