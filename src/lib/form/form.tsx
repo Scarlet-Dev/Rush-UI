@@ -15,9 +15,9 @@ export default class FormElements{
      * @property props.pattern
      */
     Input(props: any): any{
-        let handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-            let inputValue = event.target.value;
-        }
+        // let handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+        //     let inputValue = event.target.value;
+        // }
         // @property 
         switch (props.type) {
             case 'text':
