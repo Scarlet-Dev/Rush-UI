@@ -27,16 +27,16 @@ module.exports = {
             tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
           },
         },
-      ],
-      },
-      { 
+      ]
+    },
+    { 
       test: /\.s[c|a]ss?$/,
       use:[
           { loader: require.resolve("style-loader") },
           { loader: require.resolve('css-loader') },
           { loader: require.resolve('sass-loader') },
       ] 
-  });
+    });
     config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx')
     return config;
   },
