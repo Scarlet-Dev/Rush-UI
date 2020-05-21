@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTyes from "prop-types";
 
 // interface Props{
 //     name: string;
