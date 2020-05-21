@@ -18,10 +18,6 @@ export default class SpecialComponents{
 
     }
 
-    Chart (props: Props) {
-        
-    }
-
     GridExpanding (props: Props){
 
     }
