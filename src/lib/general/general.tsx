@@ -97,6 +97,23 @@ export default class GeneralComponents{
      * 
      * @param props 
      */
+    Section(props:any){
+        return(
+            <section>
+                <div>
+                    <h3></h3>
+                </div>
+                <div>
+                    {props.children}
+                </div>
+            </section>
+        )
+    }
+
+    /**
+     * 
+     * @param props 
+     */
     GridBasic(props: any){
         return(
             <div className="grid-row">
