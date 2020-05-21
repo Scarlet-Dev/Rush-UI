@@ -87,7 +87,7 @@ export default class GeneralComponents{
             <footer>
                 <this.GridBasic>
                     <div>
-                        Footer Here
+                        {props.footerText}
                     </div>
                 </this.GridBasic>
             </footer>
