@@ -19,9 +19,9 @@ export function GridExpanding (props: SpecialProps){
 
 }
 
-    Lightbox (props: Props){
-        
-    }
+export function Lightbox (props: SpecialProps){
+    
+}
 
     Tile (props: Props){
 
