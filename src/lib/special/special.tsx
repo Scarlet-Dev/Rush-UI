@@ -1,11 +1,10 @@
 import React from 'react';
 import "./_special.scss";
 
-interface Props{
+interface SpecialProps{
     id: string;
     name: string;
     style: [];
-
 }
 
 export default class SpecialComponents{
