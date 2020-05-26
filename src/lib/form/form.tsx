@@ -1,6 +1,22 @@
 import React from 'react';
 
-export default class FormElements{
+export interface FormProps{
+    id?: string;
+    type?: string;
+    for?: string;
+    text?: string;
+    placeholder?: string;
+    min?: number;
+    max?: number;
+    step?: number;
+    pattern?: string;
+    rows?: number;
+    cols?: number;
+    onChange: (value: any) => {};
+    onSelectChange: (value:any) => {};
+    dataArray: [];
+    children?: React.ReactNode;
+}
 
     constructor(){}
     
