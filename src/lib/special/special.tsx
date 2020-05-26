@@ -23,7 +23,7 @@ export function Lightbox (props: SpecialProps){
     
 }
 
-    Tile (props: Props){
+export function Tile (props: SpecialProps){
 
 }
 
