@@ -7,9 +7,7 @@ interface SpecialProps{
     style: [];
 }
 
-export default class SpecialComponents{
-    constructor(){}
-    
+
     Carousel (props: Props){
         return(
             <div></div>
@@ -27,5 +25,5 @@ export default class SpecialComponents{
 
     Tile (props: Props){
 
-    }
 }
+
