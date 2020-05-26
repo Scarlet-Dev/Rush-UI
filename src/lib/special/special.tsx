@@ -8,12 +8,12 @@ interface SpecialProps{
 }
 
 
-    Carousel (props: Props){
-        return(
-            <div></div>
-        );
+export function Carousel (props: SpecialProps){
+    return(
+        <div></div>
+    );
 
-    }
+}
 
     GridExpanding (props: Props){
 
