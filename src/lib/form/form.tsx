@@ -18,8 +18,7 @@ export interface FormProps{
     children?: React.ReactNode;
 }
 
-    constructor(){}
-    
+
     /**
      * 
      * @param props
@@ -127,5 +126,3 @@ export interface FormProps{
             </select>
         )
     }
-
-}
