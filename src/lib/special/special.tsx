@@ -15,9 +15,9 @@ export function Carousel (props: SpecialProps){
 
 }
 
-    GridExpanding (props: Props){
+export function GridExpanding (props: SpecialProps){
 
-    }
+}
 
     Lightbox (props: Props){
         
