@@ -19,7 +19,7 @@ export interface FormProps{
 }
 
 
-    /**
+export function Input(props: FormProps): any{
      * 
      * @param props
      * 
@@ -29,7 +29,6 @@ export interface FormProps{
      * @property props.placeholder
      * @property props.pattern
      */
-    Input(props: any): any{
         // let handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
         //     let inputValue = event.target.value;
         // }
@@ -73,14 +72,13 @@ export interface FormProps{
     }
 
 
-    /**
+export function Label(props: FormProps){
      * 
      * @param props 
      * @property props.id
      * @property props.for
      * @property props.text
      */
-    Label(props: any){
         return(
             <label id={props.id} htmlFor={props.for}>
                 {props.text}
@@ -88,7 +86,7 @@ export interface FormProps{
         )
     }
 
-    /**
+export function TextArea(props: FormProps){
      * 
      * @param props
      * @property props.id 
@@ -96,17 +94,15 @@ export interface FormProps{
      * @property props.cols 
      * @property props.placeholder 
      */
-    TextArea(props: any){
         return(
             <textarea id={props.id} rows={props.row || 4} cols={props.cols || 50} placeholder={props.placeholder || ""}></textarea>
         )
     }
 
     /**
-     * 
+export function Dropdown(props: FormProps){
      * @param props 
      */
-    Dropdown(props: any){
 
         let handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
             let selectedValue = event.target.value;
