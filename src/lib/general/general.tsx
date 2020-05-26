@@ -1,12 +1,13 @@
 import * as React from "react";
 import PropTyes from "prop-types";
 
-// interface Props{
-//     name: string;
-//     method: () => {};
-//     message: string;
-//     children: any;
-// }
+export interface GeneralProps{
+    name?: string;
+    onClick?: () => {};
+    message?: string;
+    src?: string;
+    children?: React.ReactNode;
+}
 
 export default class GeneralComponents{
     constructor(){}
