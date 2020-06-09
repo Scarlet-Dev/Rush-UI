@@ -13,8 +13,6 @@ export interface FormProps{
     pattern?: string;
     rows?: number;
     cols?: number;
-    onChange: (value: any) => {};
-    onSelectChange: (value:any) => {};
     dataArray: [];
     children?: React.ReactNode;
 }
