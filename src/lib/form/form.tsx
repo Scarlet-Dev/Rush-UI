@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FunctionComponent} from 'react';
 import './_form.scss';
 
 export interface FormProps{
