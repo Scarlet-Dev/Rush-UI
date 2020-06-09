@@ -17,13 +17,17 @@ export type FormProps = {
     children?: React.ReactNode;
 }
 
+/**
+ * 
+ * @param props 
+ */
+export const Input:FunctionComponent<FormProps> = (props: FormProps) => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         let target = event.target;
         console.log(target.value);
         event.preventDefault();
     }
 
-export function Input(props: FormProps): any{
     switch (props.type) {
         case 'text':
             return(
@@ -62,8 +66,11 @@ export function Input(props: FormProps): any{
     }
 }
 
-
-export function Label(props: FormProps){
+/**
+ * 
+ * @param props 
+ */
+export const Label:FunctionComponent<FormProps> = (props: FormProps) =>{
     return(
         <label id={props.id} htmlFor={props.for}>
             {props.text}
@@ -71,6 +78,11 @@ export function Label(props: FormProps){
     )
 }
 
+/**
+ * 
+ * @param props 
+ */
+export const TextArea:FunctionComponent<FormProps> = (props: FormProps) => {
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         let target = event.target;
         console.log(target.value);
@@ -81,8 +93,11 @@ export function Label(props: FormProps){
     )
 }
 
-
-export function Dropdown(props: FormProps){
+/**
+ * 
+ * @param props 
+ */
+export const Dropdown: FunctionComponent<FormProps> = (props: FormProps) => {
 
     let handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
         let selectedValue = event.target.value;
