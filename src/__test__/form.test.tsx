@@ -1,4 +1,4 @@
-import  FormComponents from '../lib/Form/Form';
+import  * as FormComponents from '../lib/form/form';
 
 describe('ExampleComponent', () => {
     it('is truthy', () => {

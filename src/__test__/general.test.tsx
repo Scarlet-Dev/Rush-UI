@@ -1,4 +1,4 @@
-import  GeneralComponents from '../lib/General/General';
+import * as  GeneralComponents from '../lib/general/general';
 
 describe('ExampleComponent', () => {
     it('is truthy', () => {
