@@ -28,26 +28,26 @@ export function Input(props: FormProps): any{
         case 'text':
             return(
                 <input type={props.type} id={props.id} minLength={props.min} maxLength={props.max} 
-                placeholder={props.placeholder}/>
+                placeholder={props.placeholder} onChange={handleChange}/>
             );
         case 'range':
         case 'number':
             return(
                 <input type={props.type} id={props.id} min={props.min || 1} max={props.max || 100} 
-                step={props.step} />
+                step={props.step} onChange={handleChange}/>
             );
         case 'date':
         case 'datetime-local':
         case 'month':
         case 'week':
             return(
-                <input type={props.type} id={props.id} min={props.min} max={props.max}/>
+                <input type={props.type} id={props.id} min={props.min} max={props.max} onChange={handleChange}/>
             );
         case 'email':
         case 'tel':
             return(
                 <input type={props.type} id={props.id} pattern={props.pattern} 
-                placeholder={props.placeholder}/>
+                placeholder={props.placeholder} onChange={handleChange}/>
             );
         case 'password':
         case 'radio':
@@ -57,7 +57,7 @@ export function Input(props: FormProps): any{
         case 'url':
             default:
             return(
-                <input type={props.type} id={props.id}/>
+                <input type={props.type} id={props.id} onChange={handleChange}/>
             );
     }
 }
@@ -77,7 +77,7 @@ export function Label(props: FormProps){
         event.preventDefault();
     }
     return(
-        <textarea id={props.id} rows={props.rows} cols={props.cols} placeholder={props.placeholder}></textarea>
+        <textarea id={props.id} rows={props.rows} cols={props.cols} placeholder={props.placeholder} onChange={handleChange}></textarea>
     )
 }
 
