@@ -17,6 +17,11 @@ export interface FormProps{
     children?: React.ReactNode;
 }
 
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        let target = event.target;
+        console.log(target.value);
+        event.preventDefault();
+    }
 
 export function Input(props: FormProps): any{
     switch (props.type) {
@@ -66,7 +71,11 @@ export function Label(props: FormProps){
     )
 }
 
-export function TextArea(props: FormProps){
+    const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        let target = event.target;
+        console.log(target.value);
+        event.preventDefault();
+    }
     return(
         <textarea id={props.id} rows={props.rows} cols={props.cols} placeholder={props.placeholder}></textarea>
     )
