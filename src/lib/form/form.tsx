@@ -108,16 +108,28 @@ export const Dropdown: FunctionComponent<FormProps> = (props: FormProps) => {
     }
 
     let arrayOfData = props.dataArray;
-    let options = arrayOfData.map(
-        (data: any) =>
-        {
-            return(
-                <option key={data.id} value={data.value}>
-                {data.name}
+    let options = () => {
+        if(arrayOfData){
+            return arrayOfData.map(
+                (data: any) =>
+                {
+                    return(
+                        <option key={data.id} value={data.value}>
+                            {data.name}
+                        </option>
+                    )
+                }
+            )
+        }
+        else{
+            return (
+                <option>
+                    No values in data Array.
                 </option>
             )
-    });
-
+        }
+    }
+    
     return(
         <select id={props.id} onChange={handleChange}>
             {options}
