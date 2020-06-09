@@ -1,6 +1,9 @@
 import React, {FunctionComponent} from 'react';
 import './_form.scss';
 
+/**
+ * 
+ */
 export type FormProps = {
     id?: string;
     type?: string;
