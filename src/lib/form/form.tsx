@@ -16,7 +16,7 @@ export type FormProps = {
     pattern?: string;
     rows?: number;
     cols?: number;
-    dataArray: [];
+    dataArray?: [];
     children?: React.ReactNode;
 }
 
