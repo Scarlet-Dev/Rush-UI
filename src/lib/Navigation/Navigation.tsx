@@ -1,19 +1,19 @@
-import React from 'react';
+import React, {FunctionComponent} from 'react';
+import "./_navigation.scss";
 
-export default class NavigationComponents{
-    BasicNav(){
-        return(
-            <>
-                <nav>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </nav>
-            </>
-        )
-    }
-    
+export const BasicNav:FunctionComponent<any> = () => {
+    return(
+        <>
+            <nav>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </>
+    )
 }
+    
+
