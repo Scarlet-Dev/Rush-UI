@@ -100,8 +100,8 @@ export const TextArea:FunctionComponent<FormProps> = (props: FormProps) => {
 export const Dropdown: FunctionComponent<FormProps> = (props: FormProps) => {
 
     let handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
-        let selectedValue = event.target.value;
-        props.onSelectChange(selectedValue);
+        let target = event.target;
+        console.log(target.value)
     }
 
     let arrayOfData = props.dataArray;
