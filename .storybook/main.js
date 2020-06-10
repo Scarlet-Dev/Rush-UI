@@ -30,14 +30,17 @@ module.exports = {
       ]
     },
     { 
-      test: /\.s[c|a]ss?$/,
-      use:[
-          { loader: require.resolve("style-loader") },
-          { loader: require.resolve('css-loader') },
-          { loader: require.resolve('sass-loader') },
-      ] 
-    });
-    config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx')
+      test: /\.s[c|a]ss$/,
+      use:['style-loader','sass-loader', 'css-loader'],
+      include: path.resolve(__dirname, '../tsconfig.json') 
+    },
+    {
+      test: /\.css$/,
+      use : ["style-loader", "css-loader"],
+      include: path.resolve(__dirname, '../tsconfig.json')
+    }
+    );
+    config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx', '.scss', '.css')
     return config;
   },
 };
