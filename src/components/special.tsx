@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import "../index.scss";
+import "./index.scss";
 
 type SpecialProps = {
     id?: string;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./_general.scss";
+import "./index.scss";
 
 export interface GeneralProps{
     name?: string;

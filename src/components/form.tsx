@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import './_form.scss';
+import './index.scss';
 
 /**
  * 
