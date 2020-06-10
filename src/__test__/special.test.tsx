@@ -1,4 +1,4 @@
-import  * as SpecialComponents from '../lib/special/special';
+import  * as SpecialComponents from '../components/special';
 
 describe('SpecialComponent', () => {
     it('is truthy', () => {

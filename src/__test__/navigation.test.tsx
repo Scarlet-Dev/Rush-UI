@@ -1,4 +1,4 @@
-import * as NavigationComponents from '../lib/navigation/navigation';
+import * as NavigationComponents from '../components/navigation';
 
 describe('NavigationComponent', () => {
     it('is truthy', () => {
