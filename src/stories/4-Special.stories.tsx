@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as SpecialComponent from "../components/special"
 
 export default{
-    title: '',
+    title: 'RushUI | Special Components and Elements',
     component: SpecialComponent,
 }
 
