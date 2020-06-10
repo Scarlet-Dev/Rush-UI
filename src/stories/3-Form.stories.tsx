@@ -1,11 +1,18 @@
 import * as React from 'react';
-import FormElements from '../lib/Form/Form';
+import * as FormElements from '../components/form';
 
 export default {
-    title:'',
+    title:'RushUI | Form Elements',
     component: FormElements,
 }
 
-const fe = new FormElements();
+// Setup basic form data
+export const basicFormData = {
 
-export const Form = () => <fe.Input />
+} 
+
+// Should convert this into an array of form types to create a list
+// of different 
+export const FormInputText = () => <FormElements.Input type="text" />
+
+export const FormInputTextArea = () => <FormElements.TextArea />

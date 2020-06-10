@@ -1,11 +1,10 @@
 import * as React from 'react';
-import NavigationElement from '../lib/navigation/navigation';
+import * as NavigationElement from '../components/navigation';
 
 export default {
-    title:'',
+    title:'RushUI | Navigation',
     component: NavigationElement,
 }
 
-const ne = new NavigationElement();
 
-export const Form = () => <ne.BasicNav />
+export const BasicNav = () => <NavigationElement.BasicNav />

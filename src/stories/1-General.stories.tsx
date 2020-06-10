@@ -1,11 +1,10 @@
 import * as React from 'react';
-import GeneralElements from '../lib/General/General';
+import * as GeneralElements from '../components/general';
 
 export default {
-    title: '',
+    title: 'RushUI | General Elements & Components',
     component: GeneralElements,
 }
 
-const ge = new GeneralElements();
 
-export const button = () => <ge.Button></ge.Button>
+export const Button = () => <GeneralElements.Button />
