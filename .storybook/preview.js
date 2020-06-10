@@ -1,1 +1,1 @@
-import '../src/lib/index.scss'
+import '../src/components/index.scss'
