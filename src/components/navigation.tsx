@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import "./_navigation.scss";
+import "../index.scss";
 
 export const BasicNav:FunctionComponent<any> = () => {
     return(
