@@ -4,6 +4,7 @@ import "./index.scss";
 interface INavigationFactory{
     createComponent(componentType:string, props:NavigationProps) : React.ReactElement | null;
 }
+const BasicNav:FunctionComponent<any> = () => {
     return(
         <>
             <nav>
@@ -17,5 +18,5 @@ interface INavigationFactory{
         </>
     )
 }
-    
+
 
