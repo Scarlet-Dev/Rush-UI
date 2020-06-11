@@ -1,23 +1,19 @@
 import React, {FunctionComponent} from 'react';
+import { FormProps, IBaseComponentFactory } from "./baseComponents";
 import './index.scss';
 
 /**
  * 
  */
-export type FormProps = {
-    id?: string;
-    type?: string;
-    for?: string;
-    text?: string;
-    placeholder?: string;
-    min?: number;
-    max?: number;
-    step?: number;
-    pattern?: string;
-    rows?: number;
-    cols?: number;
-    dataArray?: [];
-    children?: React.ReactNode;
+export class FormComponentFactory implements IBaseComponentFactory{
+    createComponent(componentType: string, props: FormProps){
+        switch(componentType){
+            case '':
+                return null;
+            default:
+                return (<>Unable to find {componentType}, please be sure this type exists or create an extension of it.</>)
+        }
+    }
 }
 
 /**

@@ -1,10 +1,31 @@
-import React, { FunctionComponent } from 'react';
+import React, {FunctionComponent} from 'react';
+import { SpecialProps, IBaseComponentFactory } from "./baseComponents";
 import "./index.scss";
 
-type SpecialProps = {
-    id?: string;
-    name?: string;
-    style?: [];
+/**
+ * 
+ */
+export class SpecialComponentFactory implements IBaseComponentFactory{
+    
+    createComponent(componentType: string, props: SpecialProps){
+        switch(componentType){
+            case 'carousel':{
+                return Carousel(props);
+            }
+            case 'grid-expanding':{
+                return GridExpanding(props);
+            }
+            case 'lightbox':{
+                return Lightbox(props);
+            }
+            case 'Tile':{
+                return Tile(props);
+            }
+            default:{
+                return (<>Unable to find {componentType}, please be sure this type exists or create an extension of it.</>)
+            }
+        }
+    }
 }
 
 

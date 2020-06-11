@@ -1,14 +1,26 @@
-import * as React from "react";
+import React, {FunctionComponent} from "react";
+import { GeneralProps, IBaseComponentFactory } from "./baseComponents";
 import "./index.scss";
 
-export interface GeneralProps{
-    name?: string;
-    onClick?: () => {};
-    message?: string;
-    src?: string;
-    children?: React.ReactNode;
-}
 
+/**
+ * 
+ */
+export class GeneralComponentFactory implements IBaseComponentFactory{
+    createComponent(componentType: string, props:GeneralProps){
+        switch (componentType){
+            case 'button':{
+                return Button(props);
+            }
+            case 'Card':{
+                return Card(props); 
+            }
+
+            default:
+                return (<>Unable to find {componentType}, please be sure this type exists or create an extension of it.</>)
+        }
+    }
+}
 
 /**
  * @whatItDoes
