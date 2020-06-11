@@ -1,7 +1,9 @@
 import React, {FunctionComponent} from 'react';
 import "./index.scss";
 
-export const BasicNav:FunctionComponent<any> = () => {
+interface INavigationFactory{
+    createComponent(componentType:string, props:NavigationProps) : React.ReactElement | null;
+}
     return(
         <>
             <nav>
