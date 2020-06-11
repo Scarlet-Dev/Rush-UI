@@ -7,7 +7,15 @@ import './index.scss';
  */
 export class FormComponentFactory implements IBaseComponentFactory{
     createComponent(componentType: string, props: FormProps){
-        switch(componentType){
+        switch(componentType.toLowerCase()){
+            case 'input':
+                return Input(props);
+            case 'label':
+                return Label(props);
+            case 'text-area':
+                return TextArea(props);
+            case 'dropdown':
+                return Dropdown(props);
             case '':
                 return null;
             default:

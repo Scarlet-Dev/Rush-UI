@@ -8,14 +8,35 @@ import "./index.scss";
  */
 export class GeneralComponentFactory implements IBaseComponentFactory{
     createComponent(componentType: string, props:GeneralProps){
-        switch (componentType){
-            case 'button':{
+        switch (componentType.toLowerCase()){
+            case 'button':
                 return Button(props);
-            }
-            case 'Card':{
+            case 'card':
                 return Card(props); 
-            }
-
+            case 'collapsible':
+                return Collapsible(props);
+            case 'comments':
+                return Comments(props);
+            case 'footer':
+                return Footer(props);
+            case 'section':
+                return Section(props);
+            case 'grid-basic':
+                return GridBasic(props);
+            case 'header':
+                return Header(props)
+            case 'loader':
+                return Loader(props);
+            case 'modal':
+                return Modal(props);
+            case 'overlay':
+                return Overlay(props);
+            case 'table':
+                return Table(props);
+            case 'tooltip':
+                return Tooltip(props)
+            case '':
+                return null;
             default:
                 return (<>Unable to find {componentType}, please be sure this type exists or create an extension of it.</>)
         }
