@@ -17,7 +17,8 @@ export class NavigationComponentFactory implements IBaseComponentFactory{
         }
     }
 }
-const BasicNav:FunctionComponent<any> = () => {
+
+const BasicNav: FunctionComponent<any> = () => {
     return(
         <>
             <nav>

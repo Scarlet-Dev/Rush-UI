@@ -28,27 +28,26 @@ export class SpecialComponentFactory implements IBaseComponentFactory{
     }
 }
 
-
-export const Carousel: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
+const Carousel: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
     return(
         <div></div>
     );
 
 }
 
-export const GridExpanding: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
+const GridExpanding: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
     return(
         <></>
     )
 }
 
-export const Lightbox:FunctionComponent<SpecialProps> = (props: SpecialProps) => {
+const Lightbox: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
     return (
         <></>
     )
 }
 
-export const Tile:FunctionComponent<SpecialProps> = (props: SpecialProps) => {
+const Tile: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
     return(
         <></>
     )

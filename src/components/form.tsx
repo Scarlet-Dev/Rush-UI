@@ -20,7 +20,7 @@ export class FormComponentFactory implements IBaseComponentFactory{
  * 
  * @param props 
  */
-export const Input:FunctionComponent<FormProps> = (props: FormProps) => {
+const Input:FunctionComponent<FormProps> = (props: FormProps) => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         let target = event.target;
         console.log(target.value);
@@ -69,7 +69,7 @@ export const Input:FunctionComponent<FormProps> = (props: FormProps) => {
  * 
  * @param props 
  */
-export const Label:FunctionComponent<FormProps> = (props: FormProps) =>{
+const Label:FunctionComponent<FormProps> = (props: FormProps) =>{
     return(
         <label id={props.id} htmlFor={props.for}>
             {props.text}
@@ -81,7 +81,7 @@ export const Label:FunctionComponent<FormProps> = (props: FormProps) =>{
  * 
  * @param props 
  */
-export const TextArea:FunctionComponent<FormProps> = (props: FormProps) => {
+const TextArea:FunctionComponent<FormProps> = (props: FormProps) => {
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         let target = event.target;
         console.log(target.value);
@@ -96,7 +96,7 @@ export const TextArea:FunctionComponent<FormProps> = (props: FormProps) => {
  * 
  * @param props 
  */
-export const Dropdown: FunctionComponent<FormProps> = (props: FormProps) => {
+const Dropdown: FunctionComponent<FormProps> = (props: FormProps) => {
 
     let handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
         let target = event.target;
