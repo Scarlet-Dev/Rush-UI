@@ -5,6 +5,7 @@ export type GeneralProps = {
     message?: string;
     src?: string;
     children?: React.ReactNode;
+    style?: [];
 }
 
 export type NavigationProps = {
@@ -12,6 +13,7 @@ export type NavigationProps = {
     name?: string,
     value?: string;
     data?: {};
+    style?: [];
 }
 
 export type FormProps = {
@@ -40,4 +42,5 @@ export type SpecialProps = {
 
 export interface IBaseComponentFactory{
     createComponent(componentType: string, props: any): React.ReactElement | null;
+    getComponentType(component: React.ReactElement): string | null;
 }
