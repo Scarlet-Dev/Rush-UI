@@ -18,8 +18,8 @@ export class ElementFabricatory{
     this.specialFactory = new SpecialComponentFactory();
   }
 
-  createElement(componentCategory:string, componentType: string, props: any){
-    switch (componentCategory){
+  createElement = (componentCategory:string, componentType: string, props: any) => {
+    switch (componentCategory.toLocaleLowerCase()){
       case 'general':
         return this.generalFactory.createComponent(componentType, props);
       
