@@ -24,6 +24,10 @@ export class SpecialComponentFactory implements IBaseComponentFactory{
             }
         }
     }
+
+    getComponentType(component: FunctionComponent){
+        return "";
+    }
 }
 
 const Carousel: FunctionComponent<SpecialProps> = (props: SpecialProps) => {

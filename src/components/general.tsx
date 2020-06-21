@@ -41,6 +41,10 @@ export class GeneralComponentFactory implements IBaseComponentFactory{
                 return (<>Unable to find {componentType}, please be sure this type exists or create an extension of it.</>)
         }
     }
+
+    getComponentType(component: FunctionComponent){
+        return "";
+    }
 }
 
 /**
