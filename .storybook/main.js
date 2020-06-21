@@ -5,7 +5,10 @@ module.exports = {
   addons: [
     '@storybook/preset-create-react-app',
     '@storybook/addon-actions',
+    '@storybook/addon-knobs',
     '@storybook/addon-links',
+    '@storybook/addon-storysource',
+    '@storybook/addon-backgrounds/register',
     {
       name:"@storybook/addon-docs",
       options: {
