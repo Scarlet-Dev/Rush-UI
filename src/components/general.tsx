@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from "react";
+import React from "react";
 import { GeneralProps, IBaseComponentFactory } from "./baseComponents";
 import "./index.scss";
 
@@ -42,7 +42,7 @@ export class GeneralComponentFactory implements IBaseComponentFactory{
         }
     }
 
-    getComponentType(component: FunctionComponent){
+    getComponentType(component: JSX.Element){
         return "";
     }
 }
@@ -52,7 +52,7 @@ export class GeneralComponentFactory implements IBaseComponentFactory{
  * 
  * @param props 
  */
-const Button: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Button = (props: GeneralProps) => {
     return(
         <button name={props.name} onClick={props.onClick}>
             {props.message}
@@ -64,14 +64,14 @@ const Button: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Card: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Card  = (props: GeneralProps) => {
     return(
         <div className="card">
             {props.children ||
             <span>
                 <img src={props.src || ''} alt="Card Avatar" style={{width: '100%'}}/>
                 <div className="card-container">
-                    <h4></h4>
+                    <h4>Card Title</h4>
                     <p>Card content goes here.</p>
                 </div>
             </span>
@@ -84,7 +84,7 @@ const Card: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Collapsible: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Collapsible  = (props: GeneralProps) => {
     return(
         <Button onClick={props.onClick}>
             {props.children ||
@@ -100,15 +100,15 @@ const Collapsible: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Comments: FunctionComponent<GeneralProps> = (props: GeneralProps, opts:any) => {
+const Comments  = (props: GeneralProps) => {
     return(
         <div>
-            <img src={props.src} />
+            <img src={props.src} alt='Alt here'/>
             <div>
                 <h1>Username Here</h1>
                 <p>Commenter's comment here.</p>
-                <i>Like: <span>{opts.count}</span></i>
-                <i>Dislike: <span>{opts.count}</span></i>
+                <i>Like: <span>{props.value}</span></i>
+                <i>Dislike: <span>{props.value}</span></i>
             </div>
         </div>
     );
@@ -118,7 +118,7 @@ const Comments: FunctionComponent<GeneralProps> = (props: GeneralProps, opts:any
  * 
  * @param props
  */
-const Footer: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Footer  = (props: GeneralProps) => {
     return(
         <footer>
             <GridBasic>
@@ -134,11 +134,11 @@ const Footer: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Section: FunctionComponent<GeneralProps> = (props:GeneralProps) => {
+const Section  = (props:GeneralProps) => {
     return(
         <section>
             <div>
-                <h3></h3>
+                <h3>Section Title</h3>
             </div>
             <div>
                 {props.children}
@@ -151,7 +151,7 @@ const Section: FunctionComponent<GeneralProps> = (props:GeneralProps) => {
  * 
  * @param props 
  */
-const GridBasic: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const GridBasic  = (props: GeneralProps) => {
     return(
         <div className="grid-row">
             <div className="grid-column"></div>
@@ -167,10 +167,10 @@ const GridBasic: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Header: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Header  = (props: GeneralProps) => {
     return(
         <header className="header">
-            {props.message || <h1></h1>}
+            {props.message || <h1>Header Title</h1>}
         </header>
     );
 }
@@ -179,7 +179,7 @@ const Header: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Loader: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Loader  = (props: GeneralProps) => {
     return(
         <div className="loader">
             {props.children}
@@ -191,7 +191,7 @@ const Loader: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Modal: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Modal  = (props: GeneralProps) => {
 
     return(
         <Overlay onClick={props.onClick}>
@@ -213,7 +213,7 @@ const Modal: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Overlay: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Overlay  = (props: GeneralProps) => {
     return(
     <div className="overlay">
         {props.children}
@@ -225,7 +225,7 @@ const Overlay: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props
  */
-const Table: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Table  = (props: GeneralProps) => {
     return(
         <table className="table">
             <caption></caption>
@@ -252,7 +252,7 @@ const Table: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
  * 
  * @param props 
  */
-const Tooltip: FunctionComponent<GeneralProps> = (props: GeneralProps) => {
+const Tooltip  = (props: GeneralProps) => {
     return(
         <div className="tooltip">
             {props.message || <span className="tooltiptext">Tooltip Text.</span>}
