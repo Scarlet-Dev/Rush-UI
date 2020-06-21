@@ -1,21 +1,16 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 import { ElementFabricatory } from '../../components/index'
 import { GeneralProps } from "../../components/baseComponents";
 
+const compCategory = 'general'
+const compType = 'button'
+var buttonType: GeneralProps = {}
 
 const elFab = new ElementFabricatory();
-const compType = 'general'
-
-var buttonType: GeneralProps = {
-}
-
-export const BasicButton = elFab.createElement(compType, 'button', buttonType)
+const BasicButton = () => { return elFab.createElement(compCategory, compType, buttonType) }
 
 
-export default {
-    title: 'RushUI | General Elements & Components',
-    component: BasicButton
-}
+storiesOf('Rush UI/General Components/Buttons', module)
+.add('with basic text', () => <BasicButton /> )
 
-
-
-// export const Button = () => <GeneralElements.Button />
