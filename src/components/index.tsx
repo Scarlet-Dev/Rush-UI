@@ -6,10 +6,10 @@ import {FormComponentFactory} from './form';
 
 export class ElementFabricatory{
 
-  generalFactory: GeneralComponentFactory;
-  navigationFactory: NavigationComponentFactory;
-  formFactory: FormComponentFactory;
-  specialFactory: SpecialComponentFactory;
+  private generalFactory: GeneralComponentFactory;
+  private navigationFactory: NavigationComponentFactory;
+  private formFactory: FormComponentFactory;
+  private specialFactory: SpecialComponentFactory;
 
   constructor(){
     this.generalFactory = new GeneralComponentFactory();
