@@ -41,6 +41,6 @@ export type SpecialProps = {
 
 
 export interface IBaseComponentFactory{
-    createComponent(componentType: string, props: any): React.ReactElement | null;
+    createComponent(componentType: string, props: any): JSX.Element | null;
     getComponentType(component: React.FunctionComponent): string | null;
 }
