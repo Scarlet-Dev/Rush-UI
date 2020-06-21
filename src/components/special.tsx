@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from 'react';
+import * as React from 'react';
 import { SpecialProps, IBaseComponentFactory } from "./baseComponents";
 import "./index.scss";
 
@@ -10,13 +10,13 @@ export class SpecialComponentFactory implements IBaseComponentFactory{
     createComponent(componentType: string, props: SpecialProps){
         switch(componentType.toLowerCase()){
             case 'carousel':
-                return Carousel(props);
+                return this.Carousel(props);
             case 'grid-expanding':
-                return GridExpanding(props);
+                return this.GridExpanding(props);
             case 'lightbox':
-                return Lightbox(props);
+                return this.Lightbox(props);
             case 'Tile':
-                return Tile(props);
+                return this.Tile(props);
             case '':
                 return null;
             default:{
@@ -25,33 +25,49 @@ export class SpecialComponentFactory implements IBaseComponentFactory{
         }
     }
 
-    getComponentType(component: FunctionComponent){
+    getComponentType(component: JSX.Element){
         return "";
     }
+
+    /**
+     * 
+     * @param props 
+     */
+     Carousel = (props: SpecialProps) => {
+        return(
+            <div></div>
+        );
+    
+    }
+    
+    /**
+     * 
+     * @param props 
+     */
+     GridExpanding = (props: SpecialProps) => {
+        return(
+            <></>
+        )
+    }
+    
+    /**
+     * 
+     * @param props 
+     */
+     Lightbox = (props: SpecialProps) => {
+        return (
+            <></>
+        )
+    }
+    
+    /**
+     * 
+     * @param props 
+     */
+    Tile = (props: SpecialProps) => {
+        return(
+            <></>
+        )
+    }
+      
 }
-
-const Carousel: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
-    return(
-        <div></div>
-    );
-
-}
-
-const GridExpanding: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
-    return(
-        <></>
-    )
-}
-
-const Lightbox: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
-    return (
-        <></>
-    )
-}
-
-const Tile: FunctionComponent<SpecialProps> = (props: SpecialProps) => {
-    return(
-        <></>
-    )
-}
-

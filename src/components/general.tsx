@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { GeneralProps, IBaseComponentFactory } from "./baseComponents";
 import "./index.scss";
 
@@ -10,31 +10,31 @@ export class GeneralComponentFactory implements IBaseComponentFactory{
     createComponent(componentType: string, props:GeneralProps){
         switch (componentType.toLowerCase()){
             case 'button':
-                return Button(props);
+                return this.Button(props);
             case 'card':
-                return Card(props); 
+                return this.Card(props); 
             case 'collapsible':
-                return Collapsible(props);
+                return this.Collapsible(props);
             case 'comments':
-                return Comments(props);
+                return this.Comments(props);
             case 'footer':
-                return Footer(props);
+                return this.Footer(props);
             case 'section':
-                return Section(props);
+                return this.Section(props);
             case 'grid-basic':
-                return GridBasic(props);
+                return this.GridBasic(props);
             case 'header':
-                return Header(props)
+                return this.Header(props)
             case 'loader':
-                return Loader(props);
+                return this.Loader(props);
             case 'modal':
-                return Modal(props);
+                return this.Modal(props);
             case 'overlay':
-                return Overlay(props);
+                return this.Overlay(props);
             case 'table':
-                return Table(props);
+                return this.Table(props);
             case 'tooltip':
-                return Tooltip(props)
+                return this.Tooltip(props)
             case '':
                 return null;
             default:
@@ -45,217 +45,218 @@ export class GeneralComponentFactory implements IBaseComponentFactory{
     getComponentType(component: JSX.Element){
         return "";
     }
-}
 
-/**
- * @whatItDoes
- * 
- * @param props 
- */
-const Button = (props: GeneralProps) => {
-    return(
-        <button name={props.name} onClick={props.onClick}>
-            {props.message}
-        </button>
-    );
-}
 
-/**
- * 
- * @param props 
- */
-const Card  = (props: GeneralProps) => {
-    return(
-        <div className="card">
-            {props.children ||
-            <span>
-                <img src={props.src || ''} alt="Card Avatar" style={{width: '100%'}}/>
-                <div className="card-container">
-                    <h4>Card Title</h4>
-                    <p>Card content goes here.</p>
-                </div>
-            </span>
-        }
-        </div>
-    );
-}
+    /**
+     * @whatItDoes
+     * 
+     * @param props 
+     */
+    Button = (props: GeneralProps) => {
+        return(
+            <button name={props.name} onClick={props.onClick}>
+                {props.message}
+            </button>
+        );
+    }
 
-/**
- * 
- * @param props 
- */
-const Collapsible  = (props: GeneralProps) => {
-    return(
-        <Button onClick={props.onClick}>
-            {props.children ||
-            <div >
-                {props.message || <p>Content here.</p>}
-            </div>
+    /**
+     * 
+     * @param props 
+     */
+    Card = (props: GeneralProps) => {
+        return(
+            <div className="card">
+                {props.children ||
+                <span>
+                    <img src={props.src || ''} alt="Card Avatar" style={{width: '100%'}}/>
+                    <div className="card-container">
+                        <h4>Card Title</h4>
+                        <p>Card content goes here.</p>
+                    </div>
+                </span>
             }
-        </Button>
-    );
-}
-
-/**
- * 
- * @param props 
- */
-const Comments  = (props: GeneralProps) => {
-    return(
-        <div>
-            <img src={props.src} alt='Alt here'/>
-            <div>
-                <h1>Username Here</h1>
-                <p>Commenter's comment here.</p>
-                <i>Like: <span>{props.value}</span></i>
-                <i>Dislike: <span>{props.value}</span></i>
             </div>
-        </div>
-    );
-}
+        );
+    }
 
-/**
- * 
- * @param props
- */
-const Footer  = (props: GeneralProps) => {
-    return(
-        <footer>
-            <GridBasic>
-                <div>
-                    {props.message}
+    /**
+     * 
+     * @param props 
+     */
+    Collapsible = (props: GeneralProps) => {
+        return(
+            <this.Button onClick={props.onClick}>
+                {props.children ||
+                <div >
+                    {props.message || <p>Content here.</p>}
                 </div>
-            </GridBasic>
-        </footer>
-    );
-}
+                }
+            </this.Button>
+        );
+    }
 
-/**
- * 
- * @param props 
- */
-const Section  = (props:GeneralProps) => {
-    return(
-        <section>
+    /**
+     * 
+     * @param props 
+     */
+    Comments = (props: GeneralProps) => {
+        return(
             <div>
-                <h3>Section Title</h3>
+                <img src={props.src} alt='Alt here'/>
+                <div>
+                    <h1>Username Here</h1>
+                    <p>Commenter's comment here.</p>
+                    <i>Like: <span>{props.value}</span></i>
+                    <i>Dislike: <span>{props.value}</span></i>
+                </div>
             </div>
-            <div>
+        );
+    }
+
+    /**
+     * 
+     * @param props
+     */
+    Footer = (props: GeneralProps) => {
+        return(
+            <footer>
+                <this.GridBasic>
+                    <div>
+                        {props.message}
+                    </div>
+                </this.GridBasic>
+            </footer>
+        );
+    }
+
+    /**
+     * 
+     * @param props 
+     */
+    Section = (props:GeneralProps) => {
+        return(
+            <section>
+                <div>
+                    <h3>Section Title</h3>
+                </div>
+                <div>
+                    {props.children}
+                </div>
+            </section>
+        )
+    }
+
+    /**
+     * 
+     * @param props 
+     */
+    GridBasic = (props: GeneralProps) => {
+        return(
+            <div className="grid-row">
+                <div className="grid-column"></div>
+                <div className="grid-column"></div>
+                <div className="grid-column"></div>
+            </div>
+        );
+
+    }
+
+    /**
+     * @whatItDoes Readily available header component
+     * 
+     * @param props 
+     */
+    Header = (props: GeneralProps) => {
+        return(
+            <header className="header">
+                {props.message || <h1>Header Title</h1>}
+            </header>
+        );
+    }
+
+    /**
+     * 
+     * @param props 
+     */
+    Loader = (props: GeneralProps) => {
+        return(
+            <div className="loader">
                 {props.children}
             </div>
-        </section>
-    )
-}
+        );
+    }
 
-/**
- * 
- * @param props 
- */
-const GridBasic  = (props: GeneralProps) => {
-    return(
-        <div className="grid-row">
-            <div className="grid-column"></div>
-            <div className="grid-column"></div>
-            <div className="grid-column"></div>
-        </div>
-    );
+    /**
+     * 
+     * @param props 
+     */
+    Modal = (props: GeneralProps) => {
 
-}
+        return(
+            <this.Overlay onClick={props.onClick}>
+                <div>
+                    <h1>{'Modal Header goes here'}</h1>
+                    <hr/>
+                    <p>{'Enter modal content here'}</p>
+                    <div>
+                        <this.Button onClick={props.onClick}></this.Button>
+                        <this.Button onClick={props.onClick}></this.Button>
+                    </div>
+                </div>
+            </this.Overlay>
+        );
 
-/**
- * @whatItDoes Readily available header component
- * 
- * @param props 
- */
-const Header  = (props: GeneralProps) => {
-    return(
-        <header className="header">
-            {props.message || <h1>Header Title</h1>}
-        </header>
-    );
-}
+    }
 
-/**
- * 
- * @param props 
- */
-const Loader  = (props: GeneralProps) => {
-    return(
-        <div className="loader">
+    /**
+     * 
+     * @param props 
+     */
+    Overlay = (props: GeneralProps) => {
+        return(
+        <div className="overlay">
             {props.children}
         </div>
-    );
-}
+        );
+    }
 
-/**
- * 
- * @param props 
- */
-const Modal  = (props: GeneralProps) => {
+    /**
+     * 
+     * @param props
+     */
+    Table = (props: GeneralProps) => {
+        return(
+            <table className="table">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        )
+    }
 
-    return(
-        <Overlay onClick={props.onClick}>
-            <div>
-                <h1>{'Modal Header goes here'}</h1>
-                <hr/>
-                <p>{'Enter modal content here'}</p>
-                <div>
-                    <Button onClick={props.onClick}></Button>
-                    <Button onClick={props.onClick}></Button>
-                </div>
+    /**
+     * 
+     * @param props 
+     */
+    Tooltip = (props: GeneralProps) => {
+        return(
+            <div className="tooltip">
+                {props.message || <span className="tooltiptext">Tooltip Text.</span>}
             </div>
-        </Overlay>
-    );
-
-}
-
-/**
- * 
- * @param props 
- */
-const Overlay  = (props: GeneralProps) => {
-    return(
-    <div className="overlay">
-        {props.children}
-    </div>
-    );
-}
-
-/**
- * 
- * @param props
- */
-const Table  = (props: GeneralProps) => {
-    return(
-        <table className="table">
-            <caption></caption>
-            <thead>
-                <tr>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td></td>
-                </tr>
-            </tfoot>
-        </table>
-    )
-}
-
-/**
- * 
- * @param props 
- */
-const Tooltip  = (props: GeneralProps) => {
-    return(
-        <div className="tooltip">
-            {props.message || <span className="tooltiptext">Tooltip Text.</span>}
-        </div>
-    )
+        )
+    }
 }
