@@ -1,4 +1,9 @@
 import * as React from 'react';
+import { GeneralComponentFactory } from "../../components/gen/general";
+import { GeneralProps } from "../../components/baseComponents";
+
+export const generalProps: GeneralProps = {};
+export const generalCompFactory = new GeneralComponentFactory();
 
 export const GeneralPage = () => {
     return (
