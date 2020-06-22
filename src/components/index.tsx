@@ -1,8 +1,8 @@
 import React from 'react';
-import {GeneralComponentFactory} from './general';
-import {NavigationComponentFactory} from './navigation';
-import {SpecialComponentFactory} from './special';
-import {FormComponentFactory} from './form';
+import {GeneralComponentFactory} from './gen/general';
+import {NavigationComponentFactory} from './nav/navigation';
+import {SpecialComponentFactory} from './spec/special';
+import {FormComponentFactory} from './form/form';
 
 export class ElementFabricatory{
 
