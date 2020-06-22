@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FormProps, IBaseComponentFactory } from "./baseComponents";
+import { FormProps, IBaseComponentFactory } from "../baseComponents";
 import './index.scss';
 
 /**

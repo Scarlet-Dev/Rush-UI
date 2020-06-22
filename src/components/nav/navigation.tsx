@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { NavigationProps, IBaseComponentFactory } from "./baseComponents";
-import "./index.scss";
+import { NavigationProps, IBaseComponentFactory } from "../baseComponents";
+import "./navigation.scss";
 
 /**
  * 

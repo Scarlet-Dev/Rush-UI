@@ -1,6 +1,6 @@
 import * as React from "react";
-import { GeneralProps, IBaseComponentFactory } from "./baseComponents";
-import "./index.scss";
+import { GeneralProps, IBaseComponentFactory } from "../baseComponents";
+import "./general.scss";
 
 
 /**
