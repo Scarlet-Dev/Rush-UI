@@ -27,10 +27,10 @@ export class NavigationComponentFactory implements IBaseComponentFactory{
             <>
                 <nav>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>Home</li>
+                        <li>Page 1</li>
+                        <li>Page 2</li>
+                        <li>Page 3</li>
                     </ul>
                 </nav>
             </>
